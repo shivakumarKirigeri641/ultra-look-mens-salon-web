@@ -4,7 +4,8 @@
   "description": "UI for ultra look salon for men",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/index.html"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,20 @@
   "bugs": {
     "url": "https://github.com/shivakumarKirigeri641/ultra-look-mens-salon-web/issues"
   },
-  "homepage": "https://github.com/shivakumarKirigeri641/ultra-look-mens-salon-web#readme"
+  "homepage": "https://github.com/shivakumarKirigeri641/ultra-look-mens-salon-web#readme",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.7.0",
+    "axios": "^1.9.0",
+    "dotenv": "^16.5.0",
+    "parcel": "^2.13.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-redux": "^9.2.0",
+    "react-router": "^7.5.3"
+  },
+  "devDependencies": {
+    "postcss": "^8.5.3",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.4.17"
+  }
 }
