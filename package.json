@@ -1,0 +1,19 @@
+{
+  "name": "ultra-look-mens-salon-web",
+  "version": "1.0.0",
+  "description": "UI for ultra look salon for men",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shivakumarKirigeri641/ultra-look-mens-salon-web.git"
+  },
+  "author": "Shivakumar, Amruta, Suhas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shivakumarKirigeri641/ultra-look-mens-salon-web/issues"
+  },
+  "homepage": "https://github.com/shivakumarKirigeri641/ultra-look-mens-salon-web#readme"
+}
