@@ -28,7 +28,7 @@ const FeedStaff = () => {
           <p className='p-4 border rounded-md bg-gradient-to-b from-gray-100 to-gray-300 w-full'>Services</p>
           <div className='flex justify-around flex-wrap'>
             {
-              servicelist.map(x=><div key={x._id}>{
+              servicelist?.map(x=><div key={x._id}>{
                 <div className='flex flex-col w-80 border border-gray-300 rounded-md m-1 shadow-xl hover:translate-x-2 duration-200 ease-in-out cursor-pointer'>
                   <div className='flex justify-between items-center'>
                     <p className='py-2 pl-2 font-semibold'>{x.serviceName}</p>
