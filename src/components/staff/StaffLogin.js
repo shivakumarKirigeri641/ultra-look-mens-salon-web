@@ -1,6 +1,6 @@
 import React from 'react'
-import StaffLoginBigScreen from'../stafflogin/StaffLoginBigScreen';
-import StaffLoginMobileScreen from'../stafflogin/StaffLoginMobileScreen';
+import StaffLoginBigScreen from'../staff/StaffLoginBigScreen';
+import StaffLoginMobileScreen from'../staff/StaffLoginMobileScreen';
 const StaffLogin = () => {
   return (
     <div className='mt-5'>

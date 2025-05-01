@@ -5,10 +5,10 @@ const staffSlice = createSlice({
     initialState:null,
     reducers:{
         addStaff:(state, action)=>{
-            state = action.payload;
+            return action.payload;
         },
         removeStaff:(state)=>{
-            state = null;
+            return null;
         }
     }
 });

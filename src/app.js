@@ -1,8 +1,9 @@
 import ReactDOM from 'react-dom/client'
 import { Provider } from 'react-redux';
-import StaffLogin from './components/stafflogin/StaffLogin';
+import StaffLogin from './components/staff/StaffLogin';
 import Feed from './components/Feed/Feed';
 import Body from './components/Body';
+import StaffLogout from './components/staff/StaffLogout';
 import AdminLogin from './components/AdminLogin';
 import appStore from './store/appStore';
 import { BrowserRouter, createBrowserRouter, Outlet, Route, Routes } from 'react-router';
@@ -17,6 +18,7 @@ const AppLayout=()=>{
                             <Route path='/' element={<Feed/>}/>
                             <Route path='/stafflogin' element={<StaffLogin/>}/>
                             <Route path='/adminlogin' element={<AdminLogin/>}/>
+                            <Route path='/stafflogout' element={<StaffLogout/>}/>
                         </Route>
                     </Routes>
                 </BrowserRouter>
