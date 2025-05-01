@@ -1,13 +1,20 @@
 import React, { useEffect } from 'react'
+import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
 
 const StaffLogout = () => {
     const navigate = useNavigate();
+    const staff = useSelector((store)=>store.staff);    
     useEffect(() => {
+      if(!staff){
+        navigate('/');
+      }
+      else{
         const timer = setTimeout(() => {
           navigate('/');
         }, 2000);    
         return () => clearTimeout(timer);
+      }
       }, []);
     
   return (

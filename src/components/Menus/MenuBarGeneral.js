@@ -21,7 +21,6 @@ const MenuBarGeneral = () => {
             }}>
               <Link className='px-2 my-1 hover:underline border-b-2 border-gray-200 hover:italic' to="/stafflogin">Admin login</Link>
               <Link className='px-2 my-1 hover:underline border-b-2 border-gray-200 hover:italic' to="/stafflogin">Staff login</Link>
-              <Link className='px-2 my-1 hover:underline border-b-2 border-gray-200 hover:italic' to="/stafflogin">Staff Sign up</Link>
             </div>
             )}
           </div>

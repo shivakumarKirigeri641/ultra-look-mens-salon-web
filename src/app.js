@@ -4,6 +4,7 @@ import StaffLogin from './components/staff/StaffLogin';
 import Feed from './components/Feed/Feed';
 import Body from './components/Body';
 import StaffLogout from './components/staff/StaffLogout';
+import StaffSignUpSuccessful from './components/staff/StaffSignUpSuccessful';
 import AdminLogin from './components/AdminLogin';
 import appStore from './store/appStore';
 import { BrowserRouter, createBrowserRouter, Outlet, Route, Routes } from 'react-router';
@@ -19,6 +20,7 @@ const AppLayout=()=>{
                             <Route path='/stafflogin' element={<StaffLogin/>}/>
                             <Route path='/adminlogin' element={<AdminLogin/>}/>
                             <Route path='/stafflogout' element={<StaffLogout/>}/>
+                            <Route path='/staffsignupsuccessful' element={<StaffSignUpSuccessful/>}/>
                         </Route>
                     </Routes>
                 </BrowserRouter>
