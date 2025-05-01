@@ -8,17 +8,20 @@ const MenuBarGeneral = () => {
       {/**big screen */}
       <div className='hidden md:flex justify-center items-center bg-blue-200 p-2 text-[16px]'>
         <Link className='p-2 hover:font-semibold transition-all duration-200 ease-in-out' to="/">Home</Link>
-        <div className='relative flex flex-col group mx-3 px-3'>
+        <div className='relative flex flex-col group mx-5 px-3'>
             <p onMouseOver={()=>{
               setshowsubmenu(true);
             }}>Login/Sign up</p>
             {showsubmenu && (
-            <div className='absolute top-10' onMouseLeave={()=>{
+            <div className='absolute p-1 rounded-md flex text-lg flex-col top-10 w-52 bg-blue-200' onMouseLeave={()=>{
+              setshowsubmenu(false)
+            }}
+            onClick={()=>{
               setshowsubmenu(false)
             }}>
-              <Link to="/stafflogin">Staff login</Link>
-              <Link to="/stafflogin">Staff login</Link>
-              <Link to="/stafflogin">Staff login</Link>
+              <Link className='px-2 my-1 hover:underline border-b-2 border-gray-200 hover:italic' to="/stafflogin">Admin login</Link>
+              <Link className='px-2 my-1 hover:underline border-b-2 border-gray-200 hover:italic' to="/stafflogin">Staff login</Link>
+              <Link className='px-2 my-1 hover:underline border-b-2 border-gray-200 hover:italic' to="/stafflogin">Staff Sign up</Link>
             </div>
             )}
           </div>

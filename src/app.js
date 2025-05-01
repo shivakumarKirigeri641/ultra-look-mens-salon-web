@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom/client'
 import { Provider } from 'react-redux';
-import StaffLogin from './components/StaffLogin';
-import Feed from './components/Feed';
+import StaffLogin from './components/stafflogin/StaffLogin';
+import Feed from './components/Feed/Feed';
 import Body from './components/Body';
 import AdminLogin from './components/AdminLogin';
 import appStore from './store/appStore';

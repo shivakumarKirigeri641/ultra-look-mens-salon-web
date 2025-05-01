@@ -1,13 +1,13 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import MenuBarGeneral from './MenuBarGeneral';
-import MenuBarAdmin from './MenuBarAdmin';
-import MenuBarStaff from './MenuBarStaff';
+import MenuBarGeneral from '../Menus/MenuBarGeneral';
+import MenuBarAdmin from '../Menus/MenuBarAdmin';
+import MenuBarStaff from '../Menus/MenuBarStaff';
 const MenuBar = () => {
   const staff = useSelector((store)=>store.staff);
   const admin = useSelector((store)=>store.admin);
   return (
-    <div className='bg-[#3E5879]'>
+    <div className='bg-[#3E5879] shadow-xl'>
       {
         !staff && !admin && (
           <MenuBarGeneral/>
