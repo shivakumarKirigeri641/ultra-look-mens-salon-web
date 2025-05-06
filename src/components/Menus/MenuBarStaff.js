@@ -4,12 +4,15 @@ import { Link, useNavigate } from 'react-router'
 import {BASE_URL} from '../../utils/constants';
 import {removeStaff} from '../../store/staffSlice';
 import { useDispatch } from 'react-redux';
+import { clearStandardService } from '../../store/addRemoveStandardServicesSlice';
 const MenuBarStaff = () => {
   const dispatchStaff = useDispatch();
+  const dispatchclearaddremoveservices = useDispatch();
   const navigate = useNavigate();
   const handleLogout=async()=>{
     const result = await axios.post(BASE_URL + '/staff/logout',{},{withCredentials:true});
     dispatchStaff(removeStaff());
+    dispatchclearaddremoveservices(clearStandardService());
     navigate('/stafflogout');
     
   }

@@ -26,23 +26,23 @@ const FeedStaff = () => {
     fetchtodaysSummary();
   },[])
   return (
-    <div className='flex flex-col m-5 p-5 border border-gray-300 rounded-md shadow-xl w-[70%] mx-auto'>
+    <div className='flex flex-col m-5 p-5 shadow-2xl mx-auto'>
       <div className='flex justify-start items-center'>
         <p className=''>Welcome, <span className='text-2xl font-semibold text-purple-800 italic'>{staff.firstName} {staff.lastName}</span></p>
       </div>
       {/**services, combo & summary */}
-      <div className='md:flex justify-center items-start'>
+      <div className='md:flex justify-center items-center m-2'>
         
         
-        <div>
+      <div className='md:flex justify-around items-center p-2 rounded-lg w-full'>
           {/**services */}
-          <div>
+          <div className='w-full'>
             <StaffStandardServices/>
           </div>
           {/**services */}
 
           {/**combo services */}
-          <div>
+          <div className='w-full'>
           <StaffComboServices/>
           </div>
           {/**combo services */}
@@ -50,7 +50,7 @@ const FeedStaff = () => {
 
 
         {/**summary */}
-        <div>
+        <div className='md:flex justify-center items-center border border-gray-400 p-2 m-1 rounded-lg w-[30%]'>
         <StaffCurrentSummary/>
         </div>
         {/**summary */}

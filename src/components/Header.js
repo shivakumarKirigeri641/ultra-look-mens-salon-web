@@ -7,7 +7,7 @@ const Header = () => {
   const staff = useSelector((store)=>store.staff);
   const admin = useSelector((store)=>store.admin);
   return (
-    <div>
+    <div className=''>
       <div className='hidden md:block'>
         <HeaderBScreeen/>
       </div>
