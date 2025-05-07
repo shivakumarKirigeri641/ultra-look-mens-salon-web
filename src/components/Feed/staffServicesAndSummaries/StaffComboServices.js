@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
-import NumberInput from '../../customComponents/NumberInput';
+import NumberInput from '../../customComponents/NumberInputComboJob';
+import NumberInputComboJob from '../../customComponents/NumberInputComboJob';
 
 const StaffComboServices = () => {
   const comboservices = useSelector((store)=>store.ComboServicesList);
@@ -25,7 +26,7 @@ const StaffComboServices = () => {
                 <td>{x.comboName}</td>
                 <td>Rs. {Math.round(x.price)}</td>
                 <td>
-                  <NumberInput serviceInfo={x}/>
+                  <NumberInputComboJob jobinfo={x}/>
                 </td>
               </tr>
             ))

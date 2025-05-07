@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import NumberInput from '../../customComponents/NumberInput';
+import NumberInputServiceJob from '../../customComponents/NumberInputServiceJob';
 import { useSelector } from 'react-redux';
 const StaffStandardServices = () => {
   const standardservices = useSelector((store)=>store.ServiceList);
@@ -26,7 +26,7 @@ const StaffStandardServices = () => {
                 <td>{x.serviceName}</td>
                 <td className='font-bold'>Rs. {Math.round(x.price)}</td>                
                 <td>
-                  <NumberInput serviceInfo={x}/>
+                  <NumberInputServiceJob jobinfo={x}/>
                 </td>
               </tr>
             ))
