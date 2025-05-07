@@ -17,7 +17,7 @@ const MenuBarStaff = () => {
     
   }
   return (
-    <div className='hidden md:flex justify-center items-center bg-blue-200 p-2 text-[16px]'>
+    <div className='hidden md:flex justify-center items-center p-2 text-[16px]'>
       <Link className='p-2 hover:font-semibold transition-all duration-200 ease-in-out' to="/">Dashboard</Link>
       <Link className='p-2 hover:font-semibold transition-all duration-200 ease-in-out' to="/">Jobs/Services</Link>
       <Link className='p-2 hover:font-semibold transition-all duration-200 ease-in-out' to="/">Statistics</Link>

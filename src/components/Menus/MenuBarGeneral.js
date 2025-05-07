@@ -6,14 +6,14 @@ const MenuBarGeneral = () => {
   return (
     <div>
       {/**big screen */}
-      <div className='hidden md:flex justify-center items-center bg-blue-200 p-2 text-[16px]'>
+      <div className='hidden md:flex justify-center items-center p-2 text-[16px]'>
         <Link className='p-2 hover:font-semibold transition-all duration-200 ease-in-out' to="/">
           <div className='flex justify-between items-center'>
             <img className='w-6 mx-2' src={require('../../images/icons/home.png')}/>
             <p>Home</p>
           </div>
         </Link>
-        <div className='relative flex flex-col group mx-5 px-3'>
+        <div className='relative flex flex-col group mx-5 px-3 '>
             <div className='flex justify-between items-center'
             onMouseOver={()=>{
               setshowsubmenu(true);
@@ -22,7 +22,7 @@ const MenuBarGeneral = () => {
               <p>Login/Sign up</p>
             </div>            
             {showsubmenu && (
-            <div className='absolute p-1 rounded-md flex text-lg flex-col top-10 w-52 bg-blue-200' onMouseLeave={()=>{
+            <div className='absolute p-1 rounded-md flex text-[16px] flex-col top-10 w-52 z-10 bg-[#3E5879]' onMouseLeave={()=>{
               setshowsubmenu(false)
             }}
             onClick={()=>{

@@ -34,7 +34,7 @@ const FeedStaff = () => {
       <div className='md:flex justify-center items-center m-2'>
         
         
-      <div className='md:flex justify-around items-center p-2 rounded-lg w-full'>
+      <div className='md:flex justify-around items-stretch p-2 rounded-lg w-full'>
           {/**services */}
           <div className='w-full'>
             <StaffStandardServices/>
