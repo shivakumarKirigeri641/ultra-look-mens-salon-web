@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import NumberInputServiceJob from '../../customComponents/NumberInputServiceJob';
 import getTotalServicesAndRespectiveAmountForStandardServices from '../../../utils/getTotalServicesAndCountForStandardServices';
 import { useDispatch, useSelector } from 'react-redux';
@@ -8,7 +7,6 @@ const StaffStandardServices = () => {
   const standardservices = useSelector((store)=>store.ServiceList);
   const myaddRemoveStandardServices = useSelector((store)=>store.addRemoveStandardServices);
   const serviceinfo = getTotalServicesAndRespectiveAmountForStandardServices(myaddRemoveStandardServices.serviceItems, standardservices);
-  console.log(serviceinfo);
   const clearStandardServices = ()=>{
     dispatch(clearStandardService());
   }
@@ -48,7 +46,7 @@ const StaffStandardServices = () => {
             <p className='px-3'>Services:<span  className='font-bold'>{myaddRemoveStandardServices?.serviceItems?.length}</span></p>
           </div>
           <div>
-            <p className='px-3'>Services:<span  className='font-bold'>Rs. {serviceinfo.amount}</span></p>
+            <p className='px-3'>Amount:<span  className='font-bold'>Rs. {serviceinfo.amount}</span></p>
           </div>
       </div>
     </div>

@@ -32,22 +32,25 @@ const FeedStaff = () => {
       </div>
       {/**services, combo & summary */}
       <div className='md:flex justify-center items-center m-2'>
-        
-        
-      <div className='md:flex justify-around items-stretch p-2 rounded-lg w-full'>
-          {/**services */}
-          <div className='w-full'>
-            <StaffStandardServices/>
-          </div>
-          {/**services */}
 
-          {/**combo services */}
-          <div className='w-full'>
-          <StaffComboServices/>
-          </div>
-          {/**combo services */}
-        </div>
+        <div>
+          <div className='md:flex justify-around items-stretch p-2 rounded-lg w-full'>
+              {/**services */}
+              <div className='w-full'>
+                <StaffStandardServices/>
+              </div>
+              {/**services */}
 
+              {/**combo services */}
+              <div className='w-full'>
+              <StaffComboServices/>
+              </div>
+              {/**combo services */}
+            </div>
+          <div className="flex justify-between p-2 text-center text-lg bg-[#757959] text-[#f5f0f0] m-2 rounded-md">
+            total summary
+          </div>
+      </div>
 
         {/**summary */}
         <div className='md:flex justify-center items-center border border-gray-400 p-2 m-1 rounded-lg w-[30%]'>

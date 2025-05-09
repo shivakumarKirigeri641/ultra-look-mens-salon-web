@@ -15,7 +15,6 @@ const NumberInputServiceJob = ({jobinfo, serviceinfo}) => {
       setCount(prev => prev + 1);
       dispatch(addStandardService(jobinfo._id));
     }
-
   return (
     <div className="flex items-center space-x-2">
       <button className="btn btn-sm btn-secondary" onClick={decrement}>-</button>
