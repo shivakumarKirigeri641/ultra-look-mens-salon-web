@@ -1,19 +1,24 @@
 import React, { useState } from 'react';
 import NumberInputServiceJob from '../../customComponents/NumberInputServiceJob';
 import getTotalServicesAndRespectiveAmountForStandardServices from '../../../utils/getTotalServicesAndCountForStandardServices';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import {clearStandardService} from '../../../store/addRemoveStandardServicesSlice';
 const StaffStandardServices = () => {
+  const dispatch=useDispatch();
   const standardservices = useSelector((store)=>store.ServiceList);
-  const [totalservices, settotalservices] = useState(0);
-  //const addRemoveStandardServices = useSelector((store)=>store.addRemoveStandardServices);
-  //console.log(addRemoveStandardServices.serviceItems);
   const myaddRemoveStandardServices = useSelector((store)=>store.addRemoveStandardServices);
   const serviceinfo = getTotalServicesAndRespectiveAmountForStandardServices(myaddRemoveStandardServices.serviceItems, standardservices);
   console.log(serviceinfo);
-  return (
+  const clearStandardServices = ()=>{
+    dispatch(clearStandardService());
+  }
+  return (    
     <div className="overflow-x-auto rounded-box border bg-base-200">
-      <div className="p-2 text-center text-lg bg-blue-700">
+      <div className="flex justify-between p-2 text-center text-lg bg-blue-700 items-center">
           <span>Standard services</span>
+          <button className='btn btn-warning' onClick={()=>{
+            clearStandardServices();
+          }}>Clear</button>
       </div>
       <table className="table">
         {/* head */}
@@ -31,7 +36,7 @@ const StaffStandardServices = () => {
                 <td>{x.serviceName}</td>
                 <td className='font-bold'>Rs. {Math.round(x.price)}</td>                
                 <td>
-                  <NumberInputServiceJob jobinfo={x}/>
+                  <NumberInputServiceJob jobinfo={x} serviceinfo={serviceinfo} />
                 </td>
               </tr>
             ))
