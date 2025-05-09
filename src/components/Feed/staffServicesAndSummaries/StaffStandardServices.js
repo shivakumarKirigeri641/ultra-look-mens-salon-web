@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import NumberInputServiceJob from '../../customComponents/NumberInputServiceJob';
+import getTotalServicesAndRespectiveAmountForStandardServices from '../../../utils/getTotalServicesAndCountForStandardServices';
 import { useSelector } from 'react-redux';
 const StaffStandardServices = () => {
   const standardservices = useSelector((store)=>store.ServiceList);
+  const [totalservices, settotalservices] = useState(0);
   //const addRemoveStandardServices = useSelector((store)=>store.addRemoveStandardServices);
   //console.log(addRemoveStandardServices.serviceItems);
+  const myaddRemoveStandardServices = useSelector((store)=>store.addRemoveStandardServices);
+  const serviceinfo = getTotalServicesAndRespectiveAmountForStandardServices(myaddRemoveStandardServices.serviceItems, standardservices);
+  console.log(serviceinfo);
   return (
     <div className="overflow-x-auto rounded-box border bg-base-200">
       <div className="p-2 text-center text-lg bg-blue-700">
@@ -33,6 +38,14 @@ const StaffStandardServices = () => {
           }
         </tbody>
       </table>
+      <div className="flex justify-between p-2 text-center text-lg bg-[#606d6a] text-[#f5f0f0]">
+          <div>
+            <p className='px-3'>Services:<span  className='font-bold'>{myaddRemoveStandardServices?.serviceItems?.length}</span></p>
+          </div>
+          <div>
+            <p className='px-3'>Services:<span  className='font-bold'>Rs. {serviceinfo.amount}</span></p>
+          </div>
+      </div>
     </div>
   )
 }
