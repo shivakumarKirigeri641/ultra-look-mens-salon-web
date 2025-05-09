@@ -1,22 +1,23 @@
 import NumberInputServiceJob from '../../customComponents/NumberInputServiceJob';
 import getTotalServicesAndRespectiveAmountForStandardServices from '../../../utils/getTotalServicesAndCountForStandardServices';
 import { useDispatch, useSelector } from 'react-redux';
-import {clearStandardService} from '../../../store/addRemoveStandardServicesSlice';
+import {clearStandardService, setisReset} from '../../../store/addRemoveStandardServicesSlice';
+import { useEffect, useState } from 'react';
 const StaffStandardServices = () => {
+  const [reloadkey, setreloadkey] = useState(0);
   const dispatch=useDispatch();
   const standardservices = useSelector((store)=>store.ServiceList);
   const myaddRemoveStandardServices = useSelector((store)=>store.addRemoveStandardServices);
   const serviceinfo = getTotalServicesAndRespectiveAmountForStandardServices(myaddRemoveStandardServices.serviceItems, standardservices);
-  const clearStandardServices = ()=>{
+  const clearServices = ()=>{
     dispatch(clearStandardService());
-  }
+    setreloadkey(prev => prev + 1);
+  };
   return (    
     <div className="overflow-x-auto rounded-box border bg-base-200">
       <div className="flex justify-between p-2 text-center text-lg bg-blue-700 items-center">
           <span>Standard services</span>
-          <button className='btn btn-warning' onClick={()=>{
-            clearStandardServices();
-          }}>Clear</button>
+          <button className='btn btn-warning' onClick={clearServices}>Clear</button>
       </div>
       <table className="table">
         {/* head */}
@@ -34,7 +35,7 @@ const StaffStandardServices = () => {
                 <td>{x.serviceName}</td>
                 <td className='font-bold'>Rs. {Math.round(x.price)}</td>                
                 <td>
-                  <NumberInputServiceJob jobinfo={x} serviceinfo={serviceinfo} />
+                  <NumberInputServiceJob key={reloadkey} jobinfo={x}/>
                 </td>
               </tr>
             ))

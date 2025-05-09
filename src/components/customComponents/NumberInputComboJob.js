@@ -17,7 +17,7 @@ const NumberInputComboJob = ({jobinfo, serviceinfo}) => {
     }
 
   return (
-    <div className="flex items-center space-x-2">
+    <div className= {0 === count?"flex items-center space-x-2":"flex items-center space-x-2 bg-[#95adaf] text-black font-bold"}>
       <button className="btn btn-sm btn-secondary" onClick={decrement}>-</button>
       <span className="text-lg w-8 text-center">{0 === serviceinfo.services?0:count}</span>
       <button className="btn btn-sm btn-primary" onClick={increment}>+</button>

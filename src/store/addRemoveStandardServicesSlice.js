@@ -5,7 +5,8 @@ const addRemoveStandardServicesSlice=createSlice(
         name:'addRemoveStandardServices',
         initialState:
         {
-            serviceItems:[]
+            serviceItems:[],
+            isReset:false
         },
         reducers:{
             addStandardService:(state, action)=>{
@@ -18,8 +19,9 @@ const addRemoveStandardServicesSlice=createSlice(
                     state.serviceItems.splice(index,1);
                 }
             },
-            clearStandardService:(state, action)=>{
-                state.serviceItems=[];
+            clearStandardService:(state, action)=>{                
+                state.serviceItems = [];
+                console.log(state.serviceItems);
             }
         }
     }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import {addStandardService, removeStandardService} from '../../store/addRemoveStandardServicesSlice';
-const NumberInputServiceJob = ({jobinfo, serviceinfo}) => {
+const NumberInputServiceJob = ({jobinfo}) => {
   const [count, setCount] = useState(0);
   const dispatch = useDispatch();
   const decrement = () => 
@@ -11,14 +11,13 @@ const NumberInputServiceJob = ({jobinfo, serviceinfo}) => {
     }
   const increment = () => 
     {
-      console.log(jobinfo._id);
       setCount(prev => prev + 1);
       dispatch(addStandardService(jobinfo._id));
     }
   return (
-    <div className="flex items-center space-x-2">
+    <div className= {0 === count?"flex items-center space-x-2":"flex items-center space-x-2 bg-[#95adaf] text-black font-bold"}>
       <button className="btn btn-sm btn-secondary" onClick={decrement}>-</button>
-      <span className="text-lg w-8 text-center">{0 === serviceinfo.services?0:count}</span>
+      <span className="text-lg w-8 text-center">{count}</span>
       <button className="btn btn-sm btn-primary" onClick={increment}>+</button>
     </div>
   );
