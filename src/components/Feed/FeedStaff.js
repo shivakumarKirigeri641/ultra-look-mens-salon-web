@@ -48,7 +48,7 @@ const FeedStaff = () => {
               {/**combo services */}
             </div>
           <div className="flex justify-between p-2 text-center text-lg bg-[#757959] text-[#f5f0f0] m-2 rounded-md">
-            total summary
+            Total services: 
           </div>
       </div>
 
