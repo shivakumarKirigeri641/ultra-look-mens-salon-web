@@ -35,15 +35,15 @@ const FeedStaff = () => {
     fetchtodaysSummary();
   },[])
   return (
-    <div className='flex flex-col m-5 p-5 shadow-2xl mx-auto'>
+    <div className='flex flex-col m-5 p-5 shadow-2xl mx-auto text-xs'>
       <div className='flex justify-start items-center'>
         <p className=''>Welcome, <span className='text-2xl font-semibold text-purple-800 italic'>{staff.firstName} {staff.lastName}</span></p>
       </div>
       {/**services, combo & summary */}
-      <div className='md:flex justify-center items-center m-2'>
+      <div className='md:flex justify-center items-center m-2 text-xs'>
 
         <div>
-          <div className='md:flex justify-around items-stretch p-2 rounded-lg w-full'>
+          <div className='md:flex justify-around items-stretch p-2 rounded-lg w-full text-xs'>
               {/**services */}
               <div className='w-full'>
                 <StaffStandardServices/>
@@ -60,6 +60,17 @@ const FeedStaff = () => {
             <p>Total services: {myaddRemoveStandardServices?.serviceItems?.length + myaddRemoveComboServices?.serviceItems?.length}</p>
             <p>Total Amount: {mystdserviceinfo?.amount + mycomboserviceinfo?.amount}</p>
           </div>
+          <div className="flex justify-center p-2 text-center text-lg bg-[#757959] text-[#f5f0f0] m-2 rounded-md">
+            <div className='flex justify-between items-center'>
+              <p>ONLINE</p>
+              <input className='w-full outline-none rounded-md px-2 py-1 mx-3 bg-transparent bg-slate-300 text-black' type='number' placeholder='Online amount'/>
+            </div>
+            <div className='flex justify-between items-center'>
+              <p>CASH</p>
+              <input className='w-full  outline-none rounded-md px-2 py-1 mx-3 bg-transparent bg-slate-300 text-black hover:bg-yellow-200 focus:bg-yellow-300' type='number' placeholder='Online amount'/>
+            </div>            
+          </div>
+          <button className='btn w-full bg-blue-700  rounded-full'>Update job</button>
       </div>
 
         {/**summary */}

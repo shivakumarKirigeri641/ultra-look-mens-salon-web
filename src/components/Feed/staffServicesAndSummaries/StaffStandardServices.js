@@ -15,9 +15,17 @@ const StaffStandardServices = () => {
   };
   return (    
     <div className="overflow-x-auto rounded-box border bg-base-200">
-      <div className="flex justify-between p-2 text-center text-lg bg-blue-700 items-center">
-          <span>Standard services</span>
-          <button className='btn btn-warning' onClick={clearServices}>Clear</button>
+      <div className="flex justify-between p-2 text-center text-lg bg-gradient-to-b from-slate-400 to-slate-600 items-center">
+          <div className='flex justify-between'>
+            <img className='w-6' src={require('../../../images/icons/standard.png')}></img>
+            <span>Standard services</span>
+          </div>
+          <button className='btn btn-outline' onClick={clearServices}>
+            <div className='flex justify-between items-center'>
+              <img className='w-6' src={require('../../../images/icons/clear.png')}></img>
+              <p className='ml-2'>Clear</p>
+            </div>
+          </button>
       </div>
       <table className="table">
         {/* head */}
