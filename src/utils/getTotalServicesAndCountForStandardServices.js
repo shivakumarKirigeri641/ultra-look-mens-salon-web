@@ -8,6 +8,7 @@ const getTotalServicesAndRespectiveAmountForStandardServices=(serviceItems, serv
     for(const item of distinctlist){
         const eachPrice = servcieslist.find(x=>x._id.toString() === item.toString()).price;
         const length = serviceItems.filter(x => x.toString() === item.toString()).length
+        console.log(serviceItems);
         const totalprice = eachPrice*length;
         servicescount = servicescount + length;
         totalamount = totalamount + totalprice;

@@ -8,8 +8,17 @@ import {addComboServiceList, removeComboServiceList} from '../../store/comboServ
 import StaffComboServices from '../Feed/staffServicesAndSummaries/StaffComboServices';
 import StaffCurrentSummary from '../Feed/staffServicesAndSummaries/StaffCurrentSummary';
 import StaffStandardServices from '../Feed/staffServicesAndSummaries/StaffStandardServices';
+import getTotalServicesAndRespectiveAmountForStandardServices from '../../utils/getTotalServicesAndCountForStandardServices'
+import getTotalServicesAndRespectiveAmountForComboServices from '../../utils/getTotalServicesAndCountForComboServices'
 const FeedStaff = () => {
   const staff = useSelector((store)=>store.staff);
+  const standardservices = useSelector((store)=>store.ServiceList);
+  const comboservices = useSelector((store)=>store.ComboServicesList);
+  const myaddRemoveStandardServices = useSelector((store)=>store.addRemoveStandardServices);
+  const mystdserviceinfo = getTotalServicesAndRespectiveAmountForStandardServices(myaddRemoveStandardServices.serviceItems, standardservices);
+
+  const myaddRemoveComboServices = useSelector((store)=>store.addRemoveComboServices);
+  const mycomboserviceinfo = getTotalServicesAndRespectiveAmountForComboServices(myaddRemoveComboServices.serviceItems, comboservices);
   const dispatchtodaysummary = useDispatch();
   const dispatchStandardServices = useDispatch();  
   const fetchtodaysSummary=async()=>{
@@ -46,9 +55,10 @@ const FeedStaff = () => {
               <StaffComboServices/>
               </div>
               {/**combo services */}
-            </div>
+          </div>        
           <div className="flex justify-between p-2 text-center text-lg bg-[#757959] text-[#f5f0f0] m-2 rounded-md">
-            Total services: 
+            <p>Total services: {myaddRemoveStandardServices?.serviceItems?.length + myaddRemoveComboServices?.serviceItems?.length}</p>
+            <p>Total Amount: {mystdserviceinfo?.amount + mycomboserviceinfo?.amount}</p>
           </div>
       </div>
 
