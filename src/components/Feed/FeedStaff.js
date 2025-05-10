@@ -56,23 +56,12 @@ const FeedStaff = () => {
               </div>
               {/**combo services */}
           </div>        
-          <div className="flex justify-between p-2 text-center text-lg bg-[#757959] text-[#f5f0f0] m-2 rounded-md">
+          <div className="flex justify-between p-2 text-center text-sm bg-[#303635] text-[#f5f0f0] m-2 rounded-md font-bold">
             <p>Total services: {myaddRemoveStandardServices?.serviceItems?.length + myaddRemoveComboServices?.serviceItems?.length}</p>
             <p>Total Amount: {mystdserviceinfo?.amount + mycomboserviceinfo?.amount}</p>
           </div>
-          <div className="flex justify-center p-2 text-center text-lg bg-[#757959] text-[#f5f0f0] m-2 rounded-md">
-            <div className='flex justify-between items-center'>
-              <p>ONLINE</p>
-              <input className='w-full outline-none rounded-md px-2 py-1 mx-3 bg-transparent bg-slate-300 text-black' type='number' placeholder='Online amount'/>
-            </div>
-            <div className='flex justify-between items-center'>
-              <p>CASH</p>
-              <input className='w-full  outline-none rounded-md px-2 py-1 mx-3 bg-transparent bg-slate-300 text-black hover:bg-yellow-200 focus:bg-yellow-300' type='number' placeholder='Online amount'/>
-            </div>            
-          </div>
           <button className='btn w-full bg-blue-700  rounded-full'>Update job</button>
       </div>
-
         {/**summary */}
         <div className='md:flex justify-center items-center border border-gray-400 p-2 m-1 rounded-lg w-[30%]'>
         <StaffCurrentSummary/>

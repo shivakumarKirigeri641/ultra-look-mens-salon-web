@@ -6,6 +6,7 @@ import todaysummaryReducer from './todaysummarySlice';
 import ComboServicesListReducer from './comboServicesSlice';
 import addRemoveStandardServicesReducer from './addRemoveStandardServicesSlice';
 import addRemoveComboServicesReducer from './addRemoveComboServicesSlice';
+import currentDateSummaryReducer from '../store/currentDateSummarySlice';
 const appStore = configureStore({
     reducer:{
         staff:staffReducer,        
@@ -14,7 +15,8 @@ const appStore = configureStore({
         todaysummary:todaysummaryReducer,
         ComboServicesList:ComboServicesListReducer,
         addRemoveStandardServices:addRemoveStandardServicesReducer,
-        addRemoveComboServices:addRemoveComboServicesReducer
+        addRemoveComboServices:addRemoveComboServicesReducer,
+        currentDateSummary:currentDateSummaryReducer
     }
 });
 export default appStore;

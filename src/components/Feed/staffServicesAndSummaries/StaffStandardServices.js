@@ -15,11 +15,8 @@ const StaffStandardServices = () => {
   };
   return (    
     <div className="overflow-x-auto rounded-box border bg-base-200">
-      <div className="flex justify-between p-2 text-center text-lg bg-gradient-to-b from-slate-400 to-slate-600 items-center">
-          <div className='flex justify-between'>
-            <img className='w-6' src={require('../../../images/icons/standard.png')}></img>
-            <span>Standard services</span>
-          </div>
+      <div className="flex justify-between p-2 text-center text-lg bg-[#131a57] items-center">
+          <p>Standard services</p>
           <button className='btn btn-outline' onClick={clearServices}>
             <div className='flex justify-between items-center'>
               <img className='w-6' src={require('../../../images/icons/clear.png')}></img>
@@ -50,7 +47,7 @@ const StaffStandardServices = () => {
           }
         </tbody>
       </table>
-      <div className="flex justify-between p-2 text-center text-lg bg-[#606d6a] text-[#f5f0f0]">
+      <div className="flex justify-between p-2 text-center text-sm bg-[#303635] text-[#f5f0f0] font-bold">
           <div>
             <p className='px-3'>Services:<span  className='font-bold'>{myaddRemoveStandardServices?.serviceItems?.length}</span></p>
           </div>
