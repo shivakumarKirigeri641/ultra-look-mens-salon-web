@@ -31,7 +31,7 @@ const StaffCurrentSummary = () => {
   <p className='text-center'>No jobs for today...😟 </p>:
   <div className="overflow-x-auto rounded-box border bg-base-200 h-full">      
       <div className="flex justify-between p-2 text-center text-lg bg-[#131a57] items-center">
-          <p>Services summary {detailedSummary.standardservicesummarydetails[0].staffId}</p>
+          <p>Services summary {new Date().toLocaleDateString()}</p>
       </div>
       <div>        
         {
