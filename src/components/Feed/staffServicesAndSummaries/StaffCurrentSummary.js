@@ -23,42 +23,44 @@ const StaffCurrentSummary = () => {
     fetchCurrentDaySummary();
   },[])
   return (
-    <div className="overflow-x-auto rounded-box border bg-base-200">
+    <div className="overflow-x-auto rounded-box border bg-base-200 h-full">
       <div className="flex justify-between p-2 text-center text-lg bg-[#131a57] items-center">
           <p>Services summary</p>          
       </div>
       <div>
         {
           (!detailedSummary.standardServices && !detailedSummary.comboServices) &&
-            <div>
-              <p>No jobs done for today...</p>
+            <div className='p-3 text-lg text-purple-300 font-semibold'>
+              <p>No jobs for today...😟 </p>
             </div>
         }
         {
           (detailedSummary.standardServices || detailedSummary.comboServices) &&
-          <table className="table">
-          {/* head */}
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Price</th>
-              <th>Job selection</th>
-            </tr>
-          </thead>
-          {/* head */}
-          <tbody>            
-          </tbody>
-          </table>                  
+          <div>
+            <table className="table">
+            {/* head */}
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Job selection</th>
+              </tr>
+            </thead>
+            {/* head */}
+            <tbody>            
+            </tbody>
+            </table>                  
+            <div className="flex justify-between p-2 text-center text-sm bg-[#303635] text-[#f5f0f0] font-bold">
+            <div>
+              <p>services</p>
+            </div>
+            <div>
+              <p>amount</p>
+            </div>
+            </div>
+          </div>
         }
-      </div>
-      <div className="flex justify-between p-2 text-center text-sm bg-[#303635] text-[#f5f0f0] font-bold">
-          <div>
-            <p>services</p>
-          </div>
-          <div>
-            <p>amount</p>
-          </div>
-      </div>
+      </div>      
     </div>
   )
 }
