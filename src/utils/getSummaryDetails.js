@@ -1,18 +1,17 @@
 const getSummaryDetails=(currentDateSummary, standardservices, comboservices)=>{
-const resultSummary={};
 let standardservicesummarydetails = [];
 let comboservicesummarydetails = [];
     try{
-        let mydistinctStdServicesIDs=new Set();                
+        		let mydistinctStdServicesIDs=new Set();                
         let mydistinctComoboServicesIDs=new Set();
-        let temp = currentDateSummary.map(x=>(x.serviceData.filter(z=>z.isCombo === false).map(y=>y.jobID))); 
+        let temp = currentDateSummary?.map(x=>(x.serviceData.filter(z=>z.isCombo === false).map(y=>y.jobID))); 
         temp.forEach(element => {
             element.forEach(x => {
                 mydistinctStdServicesIDs.add(x);
             });
         });
         //combo        
-        temp = currentDateSummary.map(x=>(x.serviceData.filter(z=>z.isCombo === true).map(y=>y.jobID))); 
+        temp = currentDateSummary?.map(x=>(x.serviceData.filter(z=>z.isCombo === true).map(y=>y.jobID))); 
         temp.forEach(element => {
             element.forEach(x => {
                 mydistinctComoboServicesIDs.add(x);
