@@ -24,7 +24,6 @@ const StaffCurrentSummary = () => {
   }
   useEffect(()=>{
     fetchCurrentDaySummary();
-<<<<<<< HEAD
   },[]);
 
   return (!detailedSummary?.standardServices && !detailedSummary?.comboServices)?
@@ -34,21 +33,6 @@ const StaffCurrentSummary = () => {
           <p>Services summary</p>          
       </div>
       <div>        
-=======
-  },[])
-  return (
-    <div className="overflow-x-auto rounded-box border bg-base-200 h-full">
-      <div className="flex justify-between p-2 text-center text-lg bg-[#131a57] items-center">
-          <p>Services summary</p>          
-      </div>
-      <div>
-        {
-          (!detailedSummary.standardServices && !detailedSummary.comboServices) &&
-            <div className='p-3 text-lg text-purple-300 font-semibold'>
-              <p>No jobs for today...😟 </p>
-            </div>
-        }
->>>>>>> 031b0dfe8ce2b07de615f8a1299fa3b5933f7bdf
         {
           (detailedSummary.standardServices || detailedSummary.comboServices) &&
           <div>
@@ -76,12 +60,7 @@ const StaffCurrentSummary = () => {
           </div>
         }
       </div>      
-<<<<<<< HEAD
   </div>
-=======
-    </div>
-  )
->>>>>>> 031b0dfe8ce2b07de615f8a1299fa3b5933f7bdf
 }
 
 export default StaffCurrentSummary
