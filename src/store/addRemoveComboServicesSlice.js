@@ -13,7 +13,6 @@ const addRemoveComboServicesSlice=createSlice(
             },
             removeComboService:(state, action)=>{
                 const index = state.serviceItems.indexOf(action.payload);
-                console.log('index:', index);
                 if(-1 !== index){
                     state.serviceItems.splice(index,1);
                 }

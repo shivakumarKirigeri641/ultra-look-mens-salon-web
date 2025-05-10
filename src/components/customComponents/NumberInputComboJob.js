@@ -11,7 +11,6 @@ const NumberInputComboJob = ({jobinfo, serviceinfo}) => {
     }
   const increment = () => 
     {
-      console.log(jobinfo._id);
       setCount(prev => prev + 1);
       dispatch(addComboService(jobinfo._id));
     }

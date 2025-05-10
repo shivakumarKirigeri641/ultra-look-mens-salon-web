@@ -1,8 +1,13 @@
 import React, { useEffect } from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import {removeStaff} from '../../store/staffSlice';
+import { useDispatch } from 'react-redux';
+import { clearStandardService } from '../../store/addRemoveStandardServicesSlice';
 import { useNavigate } from 'react-router';
 
 const StaffLogout = () => {
+    const dispatchStaff = useDispatch();
+    const dispatchclearaddremoveservices = useDispatch();
     const navigate = useNavigate();
     const staff = useSelector((store)=>store.staff);    
     useEffect(() => {
@@ -10,6 +15,8 @@ const StaffLogout = () => {
         navigate('/');
       }
       else{
+        dispatchStaff(removeStaff());
+        dispatchclearaddremoveservices(clearStandardService());
         const timer = setTimeout(() => {
           navigate('/');
         }, 2000);    

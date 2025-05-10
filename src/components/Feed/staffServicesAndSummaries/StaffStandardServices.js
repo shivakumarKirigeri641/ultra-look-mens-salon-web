@@ -14,10 +14,10 @@ const StaffStandardServices = () => {
     setreloadkey(prev => prev + 1);
   };
   return (    
-    <div className="overflow-x-auto rounded-box border bg-base-200">
+    <div className="overflow-x-auto rounded-box border border-slate-500 bg-base-200">
       <div className="flex justify-between p-2 text-center text-lg bg-[#131a57] items-center">
           <p>Standard services</p>
-          <button className='btn btn-outline' onClick={clearServices}>
+          <button className='btn btn-neutral' onClick={clearServices}>
             <div className='flex justify-between items-center'>
               <img className='w-6' src={require('../../../images/icons/clear.png')}></img>
               <p className='ml-2'>Clear</p>

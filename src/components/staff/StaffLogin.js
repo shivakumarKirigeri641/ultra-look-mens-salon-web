@@ -21,7 +21,6 @@ const StaffLogin = () => {
             throw new Error('Invalid input!')
           }  
           const result = await axios.post(BASE_URL + '/staff/login', {email, password}, {withCredentials:true});
-          console.log(result?.data?.data);
           dispatchStaff(addStaff(result?.data?.data));
           navigate('/');
         }
