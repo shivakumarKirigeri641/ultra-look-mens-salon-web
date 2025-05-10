@@ -41,7 +41,6 @@ const FeedStaff = () => {
       </div>
       {/**services, combo & summary */}
       <div className='md:flex justify-center items-center m-2 text-xs'>
-
         <div>
           <div className='md:flex justify-around items-stretch p-2 rounded-lg w-full text-xs'>
               {/**services */}
@@ -55,16 +54,16 @@ const FeedStaff = () => {
               <StaffComboServices/>
               </div>
               {/**combo services */}
-          </div>        
+          </div>
           <div className="flex justify-between p-2 text-center text-sm bg-[#303635] text-[#f5f0f0] m-2 rounded-md font-bold">
             <p>Total services: {myaddRemoveStandardServices?.serviceItems?.length + myaddRemoveComboServices?.serviceItems?.length}</p>
             <p>Total Amount: {mystdserviceinfo?.amount + mycomboserviceinfo?.amount}</p>
           </div>
           <button className='btn w-full bg-blue-700  rounded-full'>Update job</button>
-      </div>
+        </div>
         {/**summary */}
-        <div className='md:flex justify-center items-center border border-gray-400 p-2 m-1 rounded-lg w-[30%]'>
-        <StaffCurrentSummary/>
+        <div className='md:flex justify-center items-center m-2 rounded-lg'>
+          <StaffCurrentSummary/>
         </div>
         {/**summary */}
       </div>

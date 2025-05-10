@@ -33,6 +33,7 @@ const StaffStandardServices = () => {
             <th>Job selection</th>
           </tr>
         </thead>
+        {/* head */}
         <tbody>
           {
             standardservices?.map(x=>(
