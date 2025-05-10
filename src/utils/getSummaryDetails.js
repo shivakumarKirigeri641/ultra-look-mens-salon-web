@@ -54,7 +54,7 @@ let comboservicesummarydetails = [];
         });
     }
     catch(err){
-        throw new Error(err);
+        
     }
     return {standardservicesummarydetails, comboservicesummarydetails};
 };
