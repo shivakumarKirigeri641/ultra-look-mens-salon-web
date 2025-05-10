@@ -26,11 +26,12 @@ const StaffCurrentSummary = () => {
     fetchCurrentDaySummary();
   },[]);
 
-  return (0 === detailedSummary?.standardservicesummarydetails.length && 0 === detailedSummary?.comboservicesummarydetails.length)?
+  return (0 === detailedSummary?.standardservicesummarydetails.length && 
+    0 === detailedSummary?.comboservicesummarydetails.length)?
   <p className='text-center'>No jobs for today...😟 </p>:
   <div className="overflow-x-auto rounded-box border bg-base-200 h-full">      
       <div className="flex justify-between p-2 text-center text-lg bg-[#131a57] items-center">
-          <p>Services summary</p>          
+          <p>Services summary {detailedSummary.standardservicesummarydetails[0].staffId}</p>
       </div>
       <div>        
         {
